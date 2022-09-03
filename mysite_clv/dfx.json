@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "dfx": "0.11.2",
+  "canisters": {
+    "mysite_clv_backend": {
+      "type": "motoko",
+      "main": "src/mysite_clv_backend/main.mo"
+    },
+    "mysite_clv_frontend": {
+      "type": "assets",
+      "source": [
+        "src/mysite_clv_frontend/assets"
+      ],
+      "dependencies": [
+        "mysite_clv_backend"
+      ]
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": "",
+      "args": ""
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  }
+}
